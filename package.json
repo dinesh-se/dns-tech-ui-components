@@ -1,0 +1,8 @@
+{
+  "name": "dslabs-backpack-ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dinesh Haribabu",
+  "license": "MIT",
+  "private": true
+}

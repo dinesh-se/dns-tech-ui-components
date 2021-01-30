@@ -1,3 +1,3 @@
-const result = add(5, 10);
+import { add } from './utils/addition';
 
-document.querySelector('.result-node').textContent = result;
+export const result = add(5, 10);

@@ -1,5 +1,6 @@
-import { result } from '../src/app/app';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import './styles/main.scss';
+import App from './app/app';
 
-document.querySelector('.result-node').textContent = `result is ${result}`;
+ReactDOM.render(<App />, document.getElementById('app'));

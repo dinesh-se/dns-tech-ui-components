@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: { 
+  entry: {
     main: './src/index.js',
     vendor: './src/vendor.js',
   },
@@ -25,7 +25,12 @@ module.exports = {
             publicPath: 'assets',
           }
         }]
-      }
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+    }
     ],
   },
   plugins: [

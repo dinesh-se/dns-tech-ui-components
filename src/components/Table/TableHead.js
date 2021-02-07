@@ -11,13 +11,13 @@ const TableHead = ({ headers }) => (
   </thead>
 );
 
-TableHead.protoTypes = {
+TableHead.propTypes = {
   headers: PropTypes.arrayOf(
     PropTypes.shape({
       key: PropTypes.string.isRequired,
       displayText: PropTypes.string.isRequired,
     })
-  ),
+  ).isRequired,
 };
 
 export default TableHead;

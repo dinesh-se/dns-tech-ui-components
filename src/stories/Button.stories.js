@@ -57,7 +57,7 @@ export const disabled = () => (
     <Button label="primary" variant="primary" disabled />
     <Button label="link" variant="link" disabled />
   </Fragment>
-)
+);
 
 const Template = (args) => <Button {...args} />;
 

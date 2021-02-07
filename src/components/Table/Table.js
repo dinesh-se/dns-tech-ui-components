@@ -6,30 +6,27 @@ import styled from 'styled-components';
 import TableHead from './TableHead';
 import TableBody from './TableBody';
 
-import { Button } from '../Button';
-
-const StyledButton = styled(Button)`
-  margin: 20px;
+const NoDataRow = styled.div`
+  line-height: 50px;
+  text-align: center;
 `;
 
-const Table = ({
-  className,
-  headers,
-  hover,
-  rows,
-  scroll,
-  striped,
-}) => (
-  <table className={cn(
-    className,
-    'table',
-    { 'table-hover' : hover },
-    { 'table-scroll' : scroll },
-    { 'table-striped' : striped },
-  )}>
-    <TableHead headers={headers} />
-    <TableBody headers={headers} rows={rows} />
-  </table>
+const Table = ({ className, headers, hover, rows, scroll, striped }) => (
+  <div className='table'>
+    <table
+      className={cn(
+        className,
+        'table',
+        { 'table-hover': hover },
+        { 'table-scroll': scroll },
+        { 'table-striped': striped },
+      )}
+    >
+      <TableHead headers={headers} />
+      {rows.length > 0 && <TableBody headers={headers} rows={rows} />}
+    </table>
+    {!rows.length && <NoDataRow>No Data</NoDataRow>}
+  </div>
 );
 
 Table.propTypes = {
@@ -37,14 +34,14 @@ Table.propTypes = {
   headers: PropTypes.arrayOf(
     PropTypes.shape({
       key: PropTypes.string.isRequired,
-      value: PropTypes.string.isRequired,
-      styles: PropTypes.string,
+      displayText: PropTypes.string.isRequired,
     }),
-  ),
+  ).isRequired,
   hover: PropTypes.bool,
   rows: PropTypes.arrayOf(
     PropTypes.shape({
-      columns: PropTypes.shape,
+      columns: PropTypes.shape(),
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     }),
   ),
   scroll: PropTypes.bool,
@@ -53,7 +50,6 @@ Table.propTypes = {
 
 Table.defaultProps = {
   className: '',
-  headers: [],
   hover: true,
   rows: [],
   scroll: false,

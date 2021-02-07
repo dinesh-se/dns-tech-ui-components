@@ -12,11 +12,11 @@ export default {
 const headers = [
   {
     key: 'header-1',
-    value: 'Header 1',
+    displayText: 'Header 1',
   },
   {
     key: 'header-2',
-    value: 'Header 2',
+    displayText: 'Header 2',
   },
 ];
 
@@ -37,17 +37,14 @@ const rows = [
   },
 ];
 
-export const Default = () => (
-  <Table 
-    headers={headers}
-    rows={rows}
-  />
-);
+export const Default = () => <Table headers={headers} rows={rows} />;
 
-const Template = (args) => <Table {...args} />;
+export const NoData = () => <Table headers={headers} />;
+
+const Template = args => <Table {...args} />;
 
 export const PlayGround = Template.bind({});
 PlayGround.args = {
   headers,
   rows,
-}
+};

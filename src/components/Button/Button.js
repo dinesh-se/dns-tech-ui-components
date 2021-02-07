@@ -1,33 +1,33 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import cn from "classnames";
 
 /**
- * 
+ * Button component with configuration options
  */
 const Button = ({
   className,
   disabled,
-  variant, 
-  state, 
-  size, 
   label,
-  loading, 
-  ...props 
+  loading,
+  onClick,
+  state,
+  size,
+  variant,
 }) => (
   <button
     type="button"
     className={cn(
       className,
-      'btn',
-      { [`btn-${variant}`] : variant },
-      { [`btn-${size}`] : size },
-      { [`btn-${state}`] : state },
-      { 'loading' : loading },
+      "btn",
+      { [`btn-${variant}`]: variant },
+      { [`btn-${size}`]: size },
+      { [`btn-${state}`]: state },
+      { loading: loading }
     )}
     disabled={disabled}
-    { ... disabled ? {tabIndex: -1} : {}}
-    {...props}
+    {...(disabled ? { tabIndex: -1 } : {})}
+    onClick={onClick}
   >
     {label}
   </button>
@@ -45,15 +45,15 @@ Button.propTypes = {
   /**
    * Button variants: default outline, primary and link
    */
-  variant: PropTypes.oneOf(['', 'primary', 'link']),
+  variant: PropTypes.oneOf(["", "primary", "link"]),
   /**
    * Button states: success and error
    */
-  state: PropTypes.oneOf(['', 'success', 'error']),
+  state: PropTypes.oneOf(["", "success", "error"]),
   /**
    * Button sizes: small, medium default and large
    */
-  size: PropTypes.oneOf(['sm', '', 'lg', 'block']),
+  size: PropTypes.oneOf(["sm", "", "lg", "block"]),
   /**
    * Button contents
    */
@@ -70,9 +70,9 @@ Button.propTypes = {
 
 Button.defaultProps = {
   disabled: false,
-  variant: '',
-  state: '',
-  size: '',
+  variant: "",
+  state: "",
+  size: "",
   loading: false,
   onClick: undefined,
 };

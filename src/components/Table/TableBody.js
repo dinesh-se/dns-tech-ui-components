@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import objectHash from 'object-hash';
 
-const TableBody = ({headers, rows}) => (
-  <tbody> 
-    {rows.map(({columns, id}) => (
-      <tr key={id}>
-      {headers.map(({key}, idx) => (
-        <td key={`${idx}-${key}-${columns[key]}`}>{columns[key]}</td>
-      ))}
-    </tr>
+const TableBody = ({ headers, rows }) => (
+  <tbody>
+    {rows.map(({ columns, id }, idx) => (
+      <tr key={id || objectHash({ idx, ...columns })}>
+        {headers.map(({ key }, idx) => (
+          <td key={`${key}-${columns[key]}-${idx}`}>{columns[key]}</td>
+        ))}
+      </tr>
     ))}
   </tbody>
 );
@@ -21,9 +22,14 @@ TableBody.propTypes = {
   ),
   rows: PropTypes.arrayOf(
     PropTypes.shape({
-      columns: PropTypes.shape,
+      columns: PropTypes.shape(),
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     }),
   ),
+};
+
+TableBody.defaultProps = {
+  rows: [],
 };
 
 export default TableBody;

@@ -1,0 +1,5 @@
+{
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "setupFilesAfterEnv": ["<rootDir>/test-utils/setup.js", "jest-prop-type-error"],
+  "testMatch": ["<rootDir>/tests/**/*.test.js"]
+}

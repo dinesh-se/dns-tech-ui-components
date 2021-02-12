@@ -63,4 +63,15 @@ describe('Table component', () => {
       ).toBeTruthy();
     });
   });
+
+  describe('Table renders with no rows', () => {
+    it('Given the table component is mounted', () => {
+      mountComponent({
+        rows: [],
+      });
+    });
+    it('Expect the table to display no data message', () => {
+      expect(element.find('div.table-no-data').text()).toBe('No Data');
+    });
+  });
 });

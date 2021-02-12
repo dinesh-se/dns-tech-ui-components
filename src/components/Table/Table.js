@@ -25,7 +25,7 @@ const Table = ({ className, headers, hover, rows, scroll, striped }) => (
       <TableHead headers={headers} />
       {rows.length > 0 && <TableBody headers={headers} rows={rows} />}
     </table>
-    {!rows.length && <NoDataRow>No Data</NoDataRow>}
+    {!rows.length && <NoDataRow className="table-no-data">No Data</NoDataRow>}
   </div>
 );
 

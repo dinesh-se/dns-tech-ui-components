@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import cn from 'classnames';
 
 import { add } from './utils/addition';
 

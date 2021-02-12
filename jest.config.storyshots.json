@@ -1,0 +1,8 @@
+{
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "setupFilesAfterEnv": ["<rootDir>/test-utils/setup.js", "jest-prop-type-error"],
+  "testMatch": ["<rootDir>/tests/storyshots.js"],
+  "moduleNameMapper": {
+    "^.+\\.(css|scss|mdx)$": "<rootDir>/test-utils/file.mock"
+  }
+}

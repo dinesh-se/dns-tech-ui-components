@@ -1,6 +1,6 @@
 {
-  "name": "dslabs-backpack-ui",
-  "version": "1.0.0",
+  "name": "ds-tech-ui-components",
+  "version": "0.1.0",
   "main": "index.js",
   "author": "Dinesh Haribabu",
   "license": "MIT",
@@ -38,8 +38,6 @@
     "webpack-merge": "^5.7.3"
   },
   "scripts": {
-    "start": "webpack serve --config webpack.dev.config.js --open",
-    "build": "webpack --config webpack.prod.config.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint src",

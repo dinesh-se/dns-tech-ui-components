@@ -23,6 +23,11 @@
   "engines": {
     "node": ">=10"
   },
+  "files": [
+    "lib/",
+    "README.md",
+    "LICENSE"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.12.16",
     "@babel/core": "^7.12.16",
@@ -43,18 +48,35 @@
     "jest": "^26.6.3",
     "jest-prop-type-error": "^1.1.0",
     "node-sass": "^5.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "rimraf": "^3.0.2",
     "sass-loader": "^11.0.1",
+    "spectre.css": "^0.5.9",
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
     "classnames": "^2.2.6",
     "object-hash": "^2.1.1",
+    "styled-components": "^5.2.1"
+  },
+  "peerDependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "spectre.css": "^0.5.9",
-    "styled-components": "^5.2.1"
+    "spectre.css": "^0.5.9"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "scripts": {
     "clean": "rimraf lib",

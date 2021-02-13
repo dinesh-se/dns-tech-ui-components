@@ -1,10 +1,28 @@
 {
-  "name": "ds-tech-ui-components",
+  "name": "@ds-tech/ui-components",
   "version": "1.0.0",
+  "description": "UI components library built with React using spectre.css",
   "main": "lib/index.js",
-  "author": "Dinesh Haribabu",
+  "author": "Dinesh Haribabu <dinesh.be.gct@gmail.com> (https://dineshharibabu.in)",
   "license": "MIT",
-  "private": true,
+  "keywords": [
+    "react-components",
+    "backpack-ui",
+    "storybook",
+    "spectre.css"
+  ],
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinesh-se/ds-tech-ui-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dinesh-se/ds-tech-ui-components/issues"
+  },
+  "homepage": "https://github.com/dinesh-se/ds-tech-ui-components#readme",
+  "engines": {
+    "node": ">=10"
+  },
   "devDependencies": {
     "@babel/cli": "^7.12.16",
     "@babel/core": "^7.12.16",
@@ -30,6 +48,14 @@
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0"
   },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "object-hash": "^2.1.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "spectre.css": "^0.5.9",
+    "styled-components": "^5.2.1"
+  },
   "scripts": {
     "clean": "rimraf lib",
     "clean:storybook": "rimraf storybook-static",
@@ -42,13 +68,5 @@
     "test:ut": "jest",
     "test:storyshots": "jest -c=jest.config.storyshots.json",
     "test:coverage": "jest --coverage"
-  },
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "object-hash": "^2.1.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "spectre.css": "^0.5.9",
-    "styled-components": "^5.2.1"
   }
 }

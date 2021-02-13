@@ -254,7 +254,7 @@ exports[`Storyshots Components/Table No Data 1`] = `
       </thead>
     </table>
     <div
-      className="sc-gsTCUz cMktrB"
+      className="sc-gsTCUz cMktrB table-no-data"
     >
       No Data
     </div>

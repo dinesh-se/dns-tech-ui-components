@@ -11,7 +11,7 @@ describe('Button component', () => {
   };
 
   describe('Button default render', () => {
-    it('Given the button component is rendered', mountComponent);
+    it('Given the button component is rendered', () => mountComponent());
     it('Expect the button to have label', () => {
       expect(element.text()).toBe('Test');
     });

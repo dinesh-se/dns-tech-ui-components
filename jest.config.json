@@ -11,5 +11,13 @@
   "collectCoverageFrom": [
     "<rootDir>/src/components/**/*.js",
     "!<rootDir>/src/components/**/index.js"
-  ]
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 95,
+      "functions": 95,
+      "lines": 95,
+      "statements": 95
+    }
+  }
 }

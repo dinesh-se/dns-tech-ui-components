@@ -96,6 +96,7 @@
     }
   },
   "scripts": {
+    "bootstrap": "yarn --frozen-lockfile",
     "clean": "rimraf lib",
     "clean:storybook": "rimraf storybook-static",
     "storybook": "start-storybook -p 6006",

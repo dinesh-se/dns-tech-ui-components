@@ -32,6 +32,9 @@
     "lib": "lib",
     "test": "tests"
   },
+  "release": {
+    "branches": ["main"]
+  },
   "devDependencies": {
     "@babel/cli": "^7.12.16",
     "@babel/core": "^7.12.16",

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 /**
- * Button component with configuration options
+ * Button component - visit `Controls` for configuration options
  */
 const Button = ({
   className,
@@ -35,44 +35,44 @@ const Button = ({
 
 Button.propTypes = {
   /**
-   * Passed styled to button
+   * Passed styles to Button component.
    */
   className: PropTypes.string,
   /**
-   * Button disabled state if true
+   * Renders button in disabled state, if true.
    */
   disabled: PropTypes.bool,
   /**
-   * Button variants: default outline, primary and link
+   * Button variants: default outline, primary and link.
    */
-  variant: PropTypes.oneOf(['', 'primary', 'link']),
+  variant: PropTypes.oneOf(['primary', 'link']),
   /**
-   * Button states: success and error
+   * Button states: success and error.
    */
-  state: PropTypes.oneOf(['', 'success', 'error']),
+  state: PropTypes.oneOf(['success', 'error']),
   /**
-   * Button sizes: small, medium default and large
+   * Button sizes: small, medium default and large.
    */
-  size: PropTypes.oneOf(['sm', '', 'lg', 'block']),
+  size: PropTypes.oneOf(['sm', 'lg', 'block']),
   /**
-   * Button contents
+   * Button label content.
    */
   label: PropTypes.string.isRequired,
   /**
-   * Button loading state if true
+   * Button loading state, if true.
    */
   loading: PropTypes.bool,
   /**
-   * Optional click handler
+   * Event handler on click.
    */
   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   disabled: false,
-  variant: '',
-  state: '',
-  size: '',
+  variant: null,
+  state: null,
+  size: null,
   loading: false,
   onClick: undefined,
 };

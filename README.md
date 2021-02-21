@@ -5,11 +5,11 @@ UI components library built with [React](https://reactjs.org/) using [spectre.cs
 
 Use the package manager [npm](https://www.npmjs.com/) to install UI components.
 ```
-npm i @ds-tech/ui-components
+npm i @dns-tech/ui-components
 ```
 ## Example Usage
 ```
-import { Button } from '@ds-tech/ui-components';
+import { Button } from '@dns-tech/ui-components';
 ```
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

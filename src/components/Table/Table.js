@@ -11,6 +11,9 @@ const NoDataRow = styled.div`
   text-align: center;
 `;
 
+/**
+ * Table component - visit `Controls` for configuration options
+ */
 const Table = ({ className, headers, hover, rows, scroll, striped }) => (
   <div className='table'>
     <table
@@ -30,21 +33,39 @@ const Table = ({ className, headers, hover, rows, scroll, striped }) => (
 );
 
 Table.propTypes = {
+  /**
+   * Passed styles to Table component.
+   */
   className: PropTypes.string,
+  /**
+   * Headers to be displayed in the table, requires unique key and text to be displayed.
+   */
   headers: PropTypes.arrayOf(
     PropTypes.shape({
       key: PropTypes.string.isRequired,
       displayText: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  /**
+   * Enables hover effect on table rows, if true.
+   */
   hover: PropTypes.bool,
+  /**
+   * Rows to be rendered on the table, columns object should have key names matching respective header keys.
+   */
   rows: PropTypes.arrayOf(
     PropTypes.shape({
       columns: PropTypes.shape(),
       id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     }),
   ),
+  /**
+   * Enables scrollbar in the table, if true.
+   */
   scroll: PropTypes.bool,
+  /**
+   * Displays rows with striped desings, if true.
+   */
   striped: PropTypes.bool,
 };
 

@@ -189,6 +189,336 @@ exports[`Storyshots Components/Button Variants 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/Forms Checkbox 1`] = `
+<div
+  className="sc-bdfBwQ dICnXw"
+>
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-checkbox"
+    >
+      <input
+        className="checkbox"
+        disabled={false}
+        type="checkbox"
+      />
+      <i
+        className="form-icon"
+      />
+      Remember me
+    </label>
+    
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Forms Input 1`] = `
+<div
+  className="sc-bdfBwQ dICnXw"
+>
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-label"
+      htmlFor="id3"
+    >
+      Label
+    </label>
+    <div
+      className=""
+    >
+      <input
+        className="form-input"
+        disabled={false}
+        id="id3"
+        placeholder="Placeholder"
+        type="text"
+      />
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Forms Radio 1`] = `
+<div
+  className="sc-bdfBwQ dICnXw"
+>
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-label"
+    >
+      Gender
+    </label>
+    <label
+      className="form-radio"
+    >
+      <input
+        disabled={false}
+        name="gender"
+        type="radio"
+      />
+      <i
+        className="form-icon"
+      />
+       
+      Male
+    </label>
+    <label
+      className="form-radio"
+    >
+      <input
+        disabled={false}
+        name="gender"
+        type="radio"
+      />
+      <i
+        className="form-icon"
+      />
+       
+      Female
+    </label>
+    
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Forms Sample Form 1`] = `
+<div
+  className="sc-bdfBwQ dICnXw"
+>
+  <form>
+    <fieldset>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+          htmlFor="id1"
+        >
+          Name
+        </label>
+        <div
+          className=""
+        >
+          <input
+            className="form-input"
+            disabled={false}
+            id="id1"
+            placeholder="Name"
+            type="text"
+          />
+          
+        </div>
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+        >
+          Gender
+        </label>
+        <label
+          className="form-radio"
+        >
+          <input
+            disabled={false}
+            name="gender"
+            type="radio"
+          />
+          <i
+            className="form-icon"
+          />
+           
+          Male
+        </label>
+        <label
+          className="form-radio"
+        >
+          <input
+            disabled={false}
+            name="gender"
+            type="radio"
+          />
+          <i
+            className="form-icon"
+          />
+           
+          Female
+        </label>
+        
+      </div>
+      <div
+        className="form-group"
+      >
+        
+        <select
+          className="form-select"
+          disabled={false}
+        >
+          <option>
+            Choose an option
+          </option>
+          <option>
+            Slack
+          </option>
+          <option>
+            Skype
+          </option>
+          <option>
+            Hipchat
+          </option>
+        </select>
+        
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-switch"
+        >
+          <input
+            disabled={false}
+            type="checkbox"
+          />
+          <i
+            className="form-icon"
+          />
+          Send me emails with news and tips
+        </label>
+        
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-label"
+          htmlFor="id2"
+        >
+          Message
+        </label>
+        <textarea
+          className="form-input"
+          disabled={false}
+          id="id2"
+          placeholder="Textarea"
+          rows={3}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="form-checkbox"
+        >
+          <input
+            className="checkbox"
+            disabled={false}
+            type="checkbox"
+          />
+          <i
+            className="form-icon"
+          />
+          Remember me
+        </label>
+        
+      </div>
+    </fieldset>
+  </form>
+</div>
+`;
+
+exports[`Storyshots Components/Forms Select 1`] = `
+<div
+  className="sc-bdfBwQ dICnXw"
+>
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-label"
+    >
+      Source
+    </label>
+    <select
+      className="form-select"
+      disabled={false}
+    >
+      <option>
+        Choose an option
+      </option>
+      <option>
+        Slack
+      </option>
+      <option>
+        Skype
+      </option>
+      <option>
+        Hipchat
+      </option>
+    </select>
+    
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Forms Switch 1`] = `
+<div
+  className="sc-bdfBwQ dICnXw"
+>
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-switch"
+    >
+      <input
+        disabled={false}
+        type="checkbox"
+      />
+      <i
+        className="form-icon"
+      />
+      Send me emails with news and tips
+    </label>
+    
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Forms Text Area 1`] = `
+<div
+  className="sc-bdfBwQ dICnXw"
+>
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-label"
+      htmlFor="id4"
+    >
+      Message
+    </label>
+    <textarea
+      className="form-input"
+      disabled={false}
+      id="id4"
+      placeholder="Textarea"
+      rows={5}
+      type="text"
+    />
+    
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/Table Default 1`] = `
 <div
   className="sc-bdfBwQ dICnXw"
@@ -301,6 +631,32 @@ exports[`Storyshots Components/Table Play Ground 1`] = `
         </tr>
       </tbody>
     </table>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Examples Input Groups 1`] = `
+<div
+  className="sc-bdfBwQ dICnXw"
+>
+  <div
+    className="input-group"
+  >
+    <span
+      className="input-group-addon"
+    >
+      Addon
+    </span>
+    <input
+      className="form-input"
+      placeholder="Placeholder"
+      type="text"
+    />
+    <button
+      className="btn btn-primary input-group-btn"
+    >
+      Submit
+    </button>
   </div>
 </div>
 `;

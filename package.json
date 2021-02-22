@@ -115,7 +115,7 @@
     "build": "yarn clean && babel src --out-dir lib --ignore '**/stories'",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
-    "test": "yarn coverage && yarn test:ut && yarn test:storyshots",
+    "test": "yarn coverage && yarn test:storyshots",
     "test:ut": "jest",
     "test:hook": "jest --bail --changedSince origin/main",
     "test:storyshots": "jest -c=jest.config.storyshots.json",

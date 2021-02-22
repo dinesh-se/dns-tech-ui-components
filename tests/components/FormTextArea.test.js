@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import { FormTextArea } from '../../src';
 
-describe.only('TextArea Component', () => {
+describe('TextArea Component', () => {
   let element;
 
   const mountComponent = (props) => {

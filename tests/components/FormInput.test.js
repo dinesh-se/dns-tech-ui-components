@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import { FormInput } from '../../src';
 
-describe.only('FormInput Component', () => {
+describe('FormInput Component', () => {
   let element;
 
   const mountComponent = (props) => {

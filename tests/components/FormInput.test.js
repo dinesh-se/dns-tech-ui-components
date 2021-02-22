@@ -1,13 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { Input } from '../../src/components/Forms';
+import { FormInput } from '../../src';
 
-describe.only('Input Component', () => {
+describe('FormInput Component', () => {
   let element;
 
   const mountComponent = (props) => {
-    element = mount(<Input {...props} />);
+    element = mount(<FormInput {...props} />);
   };
 
   describe('Input component renders in default state', () => {

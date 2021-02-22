@@ -8,6 +8,7 @@ import cn from 'classnames';
 const Button = ({
   className,
   disabled,
+  inputGroup,
   label,
   loading,
   onClick,
@@ -23,6 +24,7 @@ const Button = ({
       { [`btn-${variant}`]: variant },
       { [`btn-${size}`]: size },
       { [`btn-${state}`]: state },
+      { 'input-group-btn': inputGroup },
       { loading: loading }
     )}
     disabled={disabled}
@@ -66,10 +68,15 @@ Button.propTypes = {
    * Event handler on click.
    */
   onClick: PropTypes.func,
+  /**
+   * Enables styling for input group, if true.
+   */
+  inputGroup: PropTypes.bool,
 };
 
 Button.defaultProps = {
   disabled: false,
+  inputGroup: false,
   variant: null,
   state: null,
   size: null,

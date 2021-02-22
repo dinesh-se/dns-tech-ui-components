@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { Table } from '../../src/components/Table';
+import { Table } from '../../src';
 import { tableHeaders, tableRows } from '../testData';
 
 describe('Table component', () => {

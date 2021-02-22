@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
+import Switch from './Switch';
+
 /**
- * Switch component - visit `Controls` for configuration options
+ * FormSwitch component - visit `Controls` for configuration options
  */
-const Switch = ({ 
+const FormSwitch = ({
   className, 
   disabled,
   label,
@@ -19,17 +21,11 @@ const Switch = ({
       'form-group',
       { [`has-${state}`]: state },
     )}>
-      <label className={cn(
-        'form-switch',
-        { [`label-${size}`]: size },
-        { [`input-${size}`]: size },
-      )}>
-        <input
-          type='checkbox' 
-          disabled={disabled}
-        />
-        <i className='form-icon'></i>{label}
-      </label>
+      <Switch
+        disabled={disabled}
+        label={label}
+        size={size}
+      />
       { stateMessage && (
         <p className='form-input-hint'>{stateMessage}</p>
       )}
@@ -37,17 +33,17 @@ const Switch = ({
   );
 };
 
-Switch.propTypes = {
+FormSwitch.propTypes = {
   /**
    * Passed styles to switch component.
    */
   className: PropTypes.string,
   /**
-   * Disables Switch component when enabled.
+   * Disables FormSwitch component when enabled.
    */
   disabled: PropTypes.bool,
   /**
-   * Label displays next to Switch component.
+   * Label displays next to FormSwitch component.
    */
   label: PropTypes.string,
   /**
@@ -64,7 +60,7 @@ Switch.propTypes = {
   stateMessage: PropTypes.string,
 };
 
-Switch.defaultProps = {
+FormSwitch.defaultProps = {
   className: '',
   disabled: false,
   label: '',
@@ -73,4 +69,4 @@ Switch.defaultProps = {
   stateMessage: '',
 };
 
-export default Switch;
+export default FormSwitch;

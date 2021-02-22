@@ -4,7 +4,7 @@ import { centerDecorator } from '../../.storybook/decorator';
 import { Button } from '../components/Button/';
 
 export default {
-  title: 'Components/Button',
+  title: 'Elements/Button',
   component: Button,
   decorators: [centerDecorator]
 };

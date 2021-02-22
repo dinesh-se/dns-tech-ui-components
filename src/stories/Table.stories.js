@@ -4,7 +4,7 @@ import { centerDecorator } from '../../.storybook/decorator';
 import { Table } from '../components/Table';
 
 export default {
-  title: 'Components/Table',
+  title: 'Elements/Table',
   component: Table,
   decorators: [centerDecorator],
 };

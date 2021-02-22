@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { centerDecorator } from '../../.storybook/decorator';
-import { Input as InputComponent } from '../components/Forms';
-import { TextArea as TextAreaComponent } from '../components/Forms';
-import { Select as SelectComponent } from '../components/Forms';
-import { Radio as RadioComponent } from '../components/Forms';
-import { Switch as SwitchComponent } from '../components/Forms';
-import { Checkbox as CheckboxComponent } from '../components/Forms';
+import { FormInput as InputComponent } from '../components/Forms';
+import { FormTextArea as TextAreaComponent } from '../components/Forms';
+import { FormSelect as SelectComponent } from '../components/Forms';
+import { FormRadio as RadioComponent } from '../components/Forms';
+import { FormSwitch as SwitchComponent } from '../components/Forms';
+import { FormCheckbox as CheckboxComponent } from '../components/Forms';
 
 const selectOptions = ['Slack', 'Skype', 'Hipchat'];
 const radioOptions = ['Male', 'Female'];
@@ -25,7 +25,7 @@ export const SampleForm = () => (
 );
 
 export default {
-  title: 'Components/Forms',
+  title: 'Elements/Forms',
   component: SampleForm,
   subcomponents: { 
     InputComponent, 

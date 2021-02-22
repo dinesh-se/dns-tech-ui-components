@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { useId } from 'react-id-generator';
 
+import TextArea from './Textarea';
+
 /**
- * TextArea component - visit `Controls` for configuration options
+ * FormTextArea component - visit `Controls` for configuration options
  */
-const TextArea = ({ 
+const FormTextArea = ({ 
   className, 
   disabled,
   label, 
@@ -36,13 +38,12 @@ const TextArea = ({
           {label}
         </label>
       )}
-      <textarea 
-        className={cn(className, 'form-input')} 
-        type="text" 
-        id={htmlId}
+      <TextArea
+        disabled={disabled}
+        htmlId={htmlId}
         placeholder={placeholder}
         rows={rows}
-        disabled={disabled}
+        size={size}
       />
       { stateMessage && (
         <p className='form-input-hint'>{stateMessage}</p>
@@ -51,7 +52,7 @@ const TextArea = ({
   );
 };
 
-TextArea.propTypes = {
+FormTextArea.propTypes = {
   /**
    * Passed styles to textarea component.
    */
@@ -86,7 +87,7 @@ TextArea.propTypes = {
   stateMessage: PropTypes.string,
 };
 
-TextArea.defaultProps = {
+FormTextArea.defaultProps = {
   className: '',
   disabled: false,
   label: '',
@@ -96,4 +97,4 @@ TextArea.defaultProps = {
   state: null,
 };
 
-export default TextArea;
+export default FormTextArea;

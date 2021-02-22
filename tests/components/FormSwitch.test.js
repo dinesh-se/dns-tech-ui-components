@@ -1,13 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { Switch } from '../../src/components/Forms';
+import { FormSwitch } from '../../src';
 
 describe('Switch component', () => {
   let element;
 
   const mountComponent = (props) => {
-    element = mount(<Switch {...props} />);
+    element = mount(<FormSwitch {...props} />);
   };
 
   describe('Switch component renders in default state', () => {

@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { useId } from 'react-id-generator';
 
+import Input from './Input';
+
 /**
- * Input component - visit `Controls` for configuration options
+ * FormInput component - visit `Controls` for configuration options
  */
-const Input = ({ 
+const FormInput = ({ 
   className,
   disabled,
   iconName,
@@ -43,15 +45,12 @@ const Input = ({
         </label>
       )}
       <div className={cn({ [iconPositionClass] : iconPositionClass })}>
-        <input 
-          className={cn( 
-            'form-input',
-            { [`input-${size}`]: size },
-          )} 
+        <Input
           type={type} 
-          id={htmlId}
-          placeholder={placeholder} 
-          disabled={disabled}
+          htmlId={htmlId}
+          placeholder={placeholder}
+          size={size}
+          {... disabled ? { disabled } : {}}
           {... pattern ? { pattern } : {}}
         />
         { (iconName || loading) && (
@@ -69,9 +68,9 @@ const Input = ({
   );
 };
 
-Input.propTypes = {
+FormInput.propTypes = {
   /**
-   * Passed styles to input component.
+   * Passed styles to FormInput component.
    */
   className: PropTypes.string,
   /**
@@ -79,7 +78,7 @@ Input.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * Icon name to be displayed on the Input component, requires `iconPosition` to be set for proper styling.
+   * Icon name to be displayed on the FormInput component, requires `iconPosition` to be set for proper styling.
    * Refer spectre.css icons for list of supported icons.
    */
   iconName: PropTypes.string,
@@ -88,11 +87,11 @@ Input.propTypes = {
    */
   iconPosition: PropTypes.oneOf(['left', 'right']),
   /**
-   * Label for the Input component
+   * Label for the FormInput component
    */
   label: PropTypes.string,
   /**
-   * Loading state for the Input component, requires `iconPosition` to be set for proper styling.
+   * Loading state for the FormInput component, requires `iconPosition` to be set for proper styling.
    */
   loading: PropTypes.bool,
   /**
@@ -100,7 +99,7 @@ Input.propTypes = {
    */
   pattern: PropTypes.string,
   /**
-   * Placeholder text for Input component.
+   * Placeholder text for FormInput component.
    */
   placeholder: PropTypes.string,
   /**
@@ -116,7 +115,7 @@ Input.propTypes = {
    */
   stateMessage: PropTypes.string,
   /**
-   * Type for the Input component such as text, email, tel.
+   * Type for the FormInput component such as text, email, tel.
    */
   type: PropTypes.oneOf([
     'text',
@@ -132,7 +131,7 @@ Input.propTypes = {
   ]),
 };
 
-Input.defaultProps = {
+FormInput.defaultProps = {
   className: '',
   disabled: false,
   iconName: '',
@@ -147,4 +146,4 @@ Input.defaultProps = {
   type: 'text',
 };
 
-export default Input;
+export default FormInput;

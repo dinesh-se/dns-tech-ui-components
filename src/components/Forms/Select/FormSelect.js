@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
+import Select from './Select';
+
 /**
- * Select component - visit `Controls` for configuration options
+ * FormSelect component - visit `Controls` for configuration options
  */
-const Select = ({ 
+const FormSelect = ({ 
   className, 
   disabled,
   label,
@@ -29,20 +31,12 @@ const Select = ({
           {label}
         </label>
       )}
-      <select 
-        className={cn(
-          className, 
-          'form-select',
-          { [`select-${size}`]: size }
-        )}
+      <Select 
         disabled={disabled}
-        {... multiple ? { multiple: true } : {} }
-      >
-        <option>Choose an option</option>
-        {options.map((option, idx) => (
-          <option key={`${idx}-${option}`}>{option}</option>
-        ))}
-      </select>
+        multiple={multiple}
+        options={options}
+        size={size}
+      />
       { stateMessage && (
         <p className='form-input-hint'>{stateMessage}</p>
       )}
@@ -50,13 +44,13 @@ const Select = ({
   );
 };
 
-Select.propTypes = {
+FormSelect.propTypes = {
   /**
    * Passed styles to select component.
    */
   className: PropTypes.string,
   /**
-   * Disables Select component when enabled.
+   * Disables FormSelect component when enabled.
    */
   disabled: PropTypes.bool,
   /**
@@ -68,7 +62,7 @@ Select.propTypes = {
    */
   multiple: PropTypes.bool,
   /**
-   * Array of options to be rendered inside Select component.
+   * Array of options to be rendered inside FormSelect component.
    */
   options: PropTypes.arrayOf(
     PropTypes.string,
@@ -87,7 +81,7 @@ Select.propTypes = {
   stateMessage: PropTypes.string,
 };
 
-Select.defaultProps = {
+FormSelect.defaultProps = {
   className: '',
   disabled: false,
   label: '',
@@ -97,4 +91,4 @@ Select.defaultProps = {
   stateMessage: '',
 };
 
-export default Select;
+export default FormSelect;

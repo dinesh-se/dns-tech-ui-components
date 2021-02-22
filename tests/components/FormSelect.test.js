@@ -1,14 +1,14 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { Select } from '../../src/components/Forms';
+import { FormSelect } from '../../src';
 
 describe('Select component', () => {
   let element;
   const options = ['Select 1', 'Select 2'];
 
   const mountComponent = (props) => {
-    element = mount(<Select options={options} {...props} />);
+    element = mount(<FormSelect options={options} {...props} />);
   };
 
   describe('Select component renders in default state', () => {

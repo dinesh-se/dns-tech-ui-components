@@ -1,13 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { TextArea } from '../../src/components/Forms';
+import { FormTextArea } from '../../src';
 
 describe.only('TextArea Component', () => {
   let element;
 
   const mountComponent = (props) => {
-    element = mount(<TextArea {...props} />);
+    element = mount(<FormTextArea {...props} />);
   };
 
   describe('TextArea field renders in default state', () => {

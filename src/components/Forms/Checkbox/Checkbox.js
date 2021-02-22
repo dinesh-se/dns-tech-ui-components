@@ -12,8 +12,6 @@ const Checkbox = ({
   inline,
   label,
   size,
-  state,
-  stateMessage,
 }) => {
   const checkboxRef = useRef();
 
@@ -24,29 +22,20 @@ const Checkbox = ({
   }, [indeterminate]);
 
   return (
-    <div className={cn(
-      className,
-      'form-group',
-      { [`has-${state}`]: state },
+    <label className={cn(
+      'form-checkbox',
+      { 'form-inline': inline },
+      { [`label-${size}`]: size },
+      { [`input-${size}`]: size }
     )}>
-      <label className={cn(
-        'form-checkbox',
-        { 'form-inline': inline },
-        { [`label-${size}`]: size },
-        { [`input-${size}`]: size }
-      )}>
-        <input
-          ref={checkboxRef}
-          className="checkbox"
-          type='checkbox'
-          disabled={disabled}
-        />
-        <i className='form-icon'></i>{label}
-      </label>
-      { stateMessage && (
-        <p className='form-input-hint'>{stateMessage}</p>
-      )}
-    </div>
+      <input
+        ref={checkboxRef}
+        className={cn(className, 'checkbox')}
+        type='checkbox'
+        {... disabled ? { disabled } : {}}
+      />
+      <i className='form-icon'></i>{label}
+    </label>
   );
 };
 
@@ -75,14 +64,6 @@ Checkbox.propTypes = {
    * Sets the size of the component.
    */
   size: PropTypes.oneOf(['sm', 'lg']),
-  /**
-   * Sets the error state for the component.
-   */
-  state: PropTypes.oneOf(['error']),
-  /**
-   * Displays message underneath the element.
-   */
-  stateMessage: PropTypes.string,
 };
 
 Checkbox.defaultProps = {
@@ -92,8 +73,6 @@ Checkbox.defaultProps = {
   inline: false,
   label: '',
   size: null,
-  state: null,
-  stateMessage: '',
 };
 
 export default Checkbox;

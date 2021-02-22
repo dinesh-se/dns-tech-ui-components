@@ -1,6 +1,6 @@
-export { default as Input } from './Input';
-export { default as TextArea } from './TextArea';
-export { default as Select } from './Select';
-export { default as Radio } from './Radio';
-export { default as Switch } from './Switch';
-export { default as Checkbox } from './Checkbox';
+export { Input, InputGroup, default as FormInput } from './Input';
+export { TextArea, default as FormTextArea } from './TextArea';
+export { Checkbox, default as FormCheckbox } from './Checkbox';
+export { Select, default as FormSelect } from './Select';
+export { Radio, default as FormRadio } from './Radio';
+export { Switch, default as FormSwitch } from './Switch';

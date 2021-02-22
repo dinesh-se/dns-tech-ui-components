@@ -1,14 +1,14 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { Radio } from '../../src/components/Forms';
+import { FormRadio } from '../../src';
 
 describe('Radio component', () => {
   let element;
   const options = ['Radio 1', 'Radio 2'];
 
   const mountComponent = (props) => {
-    element = mount(<Radio name="test" options={options} {...props} />);
+    element = mount(<FormRadio name="test" options={options} {...props} />);
   };
 
   describe('Radio component renders in default state', () => {

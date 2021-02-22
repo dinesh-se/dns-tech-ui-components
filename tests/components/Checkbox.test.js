@@ -1,20 +1,20 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { Checkbox } from '../../src/components/Forms';
+import { FormCheckbox } from '../../src';
 
 describe('Checkbox component', () => {
   let element;
 
   const mountComponent = (props) => {
-    element = mount(<Checkbox {...props} />);
+    element = mount(<FormCheckbox {...props} />);
   };
 
   describe('Checkbox component renders in default state', () => {
     it('Given the component is rendered', () => mountComponent());
     it('Expect the component renders in default state', () => {
       expect(element.find('.checkbox')).toHaveLength(1);
-      expect(element.find('.checkbox').prop('disabled')).toBe(false);
+      expect(element.find('.checkbox').prop('disabled')).toBe(undefined);
       expect(element.find('i')).toHaveLength(1);
     });
   });

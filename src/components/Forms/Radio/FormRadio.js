@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
+import Radio from './Radio';
+
 /**
- * Radio component - visit `Controls` for configuration options
+ * FormRadio component - visit `Controls` for configuration options
  */
-const Radio = ({ 
+const FormRadio = ({ 
   className,
   disabled,
   inline,
@@ -30,23 +32,13 @@ const Radio = ({
           {label}
         </label>
       )}
-      {options.map((option, idx) => (
-        <label
-          className={cn(
-            'form-radio',
-            { 'form-inline': inline },
-            { [`input-${size}`]: size }
-          )}
-          key={`${idx}-${option}`}
-        >
-          <input 
-            type='radio' 
-            name={name} 
-            disabled={disabled}
-          />
-          <i className='form-icon'></i> {option}
-        </label>
-      ))}
+      <Radio
+        disabled={disabled}
+        inline={inline}
+        name={name}
+        options={options}
+        size={size}
+      />
       { stateMessage && (
         <p className='form-input-hint'>{stateMessage}</p>
       )}
@@ -54,7 +46,7 @@ const Radio = ({
   );
 };
 
-Radio.propTypes = {
+FormRadio.propTypes = {
   /**
    * Passed styles to radio component.
    */
@@ -95,7 +87,7 @@ Radio.propTypes = {
   stateMessage: PropTypes.string,
 };
 
-Radio.defaultProps = {
+FormRadio.defaultProps = {
   className: '',
   disabled: false,
   inline: false,
@@ -105,4 +97,4 @@ Radio.defaultProps = {
   stateMessage: '',
 };
 
-export default Radio;
+export default FormRadio;

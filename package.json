@@ -121,6 +121,7 @@
     "test:storyshots": "jest -c=jest.config.storyshots.json",
     "coverage": "jest --coverage",
     "package-generate": "npm pack",
-    "package-check": "npm publish --dry-run"
+    "package-check": "npm publish --dry-run",
+    "chromatic": "chromatic --project-token CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes"
   }
 }

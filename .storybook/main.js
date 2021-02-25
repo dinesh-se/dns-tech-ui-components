@@ -8,7 +8,6 @@ module.exports = {
     "@storybook/addon-essentials"
   ],
   webpackFinal: async (config, { configType }) => {
-    console.log(config);
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.
     // 'PRODUCTION' is used when building the static version of storybook.

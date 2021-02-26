@@ -111,4 +111,42 @@ describe('Button component', () => {
       expect(onClickHandler).toHaveBeenCalled();
     });
   });
+
+  describe('Button renders with icon', () => {
+    it('Given the button component is rendered with icon name', () => {
+      mountComponent({
+        Label: 'Test',
+        iconName: 'test-icon',
+      });
+    });
+    it('Expect the icon to be present inside button', () => {
+      expect(element.find('i.icon').hasClass('test-icon')).toBeTruthy();
+    });
+  });
+  
+  describe('Button renders with icon in square', () => {
+    it('Given the button component is rendered with icon name and shape', () => {
+      mountComponent({
+        iconName: 'test-icon',
+        shape: 'square',
+      });
+    });
+    it('Expect the icon to be present inside a square button', () => {
+      expect(element.hasClass('btn-action')).toBeTruthy();
+      expect(element.find('i.icon').hasClass('test-icon')).toBeTruthy();
+    });
+  });
+
+  describe('Button renders with icon in circle', () => {
+    it('Given the button component is rendered with icon name and shape', () => {
+      mountComponent({
+        iconName: 'test-icon',
+        shape: 'circle',
+      });
+    });
+    it('Expect the icon to be present inside a circle button', () => {
+      expect(element.hasClass('btn-action s-circle')).toBeTruthy();
+      expect(element.find('i.icon').hasClass('test-icon')).toBeTruthy();
+    });
+  });
 });

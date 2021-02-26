@@ -8,10 +8,12 @@ import cn from 'classnames';
 const Button = ({
   className,
   disabled,
+  iconName,
   inputGroup,
   label,
   loading,
   onClick,
+  shape,
   state,
   size,
   variant,
@@ -25,6 +27,8 @@ const Button = ({
       { [`btn-${size}`]: size },
       { [`btn-${state}`]: state },
       { 'input-group-btn': inputGroup },
+      { 'btn-action': shape },
+      { 's-circle': shape === 'circle' },
       { loading: loading }
     )}
     disabled={disabled}
@@ -32,6 +36,9 @@ const Button = ({
     onClick={onClick}
   >
     {label}
+    {iconName && (
+      <i className={cn('icon', iconName)}></i>
+    )}
   </button>
 );
 
@@ -45,9 +52,18 @@ Button.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
+   * Icon to be displayed as button.
+   * Refer spectre.css icons for list of supported icons.
+   */
+  iconName: PropTypes.string,
+  /**
    * Button variants: default outline, primary and link.
    */
   variant: PropTypes.oneOf(['primary', 'link']),
+  /**
+   * Button shape, useful for icon buttons.
+   */
+  shape: PropTypes.oneOf(['square', 'circle']),
   /**
    * Button states: success and error.
    */
@@ -76,8 +92,10 @@ Button.propTypes = {
 
 Button.defaultProps = {
   disabled: false,
+  iconName: '',
   inputGroup: false,
   variant: null,
+  shape: null,
   state: null,
   size: null,
   loading: false,

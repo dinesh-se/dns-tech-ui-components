@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
 
 /**
  * Button component - visit `Controls` for configuration options
@@ -40,7 +40,7 @@ const Button = ({
       <i className={cn('icon', iconName)}></i>
     )}
   </button>
-);
+)
 
 Button.propTypes = {
   /**
@@ -88,7 +88,7 @@ Button.propTypes = {
    * Enables styling for input group, if true.
    */
   inputGroup: PropTypes.bool,
-};
+}
 
 Button.defaultProps = {
   disabled: false,
@@ -100,6 +100,6 @@ Button.defaultProps = {
   size: null,
   loading: false,
   onClick: undefined,
-};
+}
 
-export default Button;
+export default Button

@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import { centerDecorator } from '../../.storybook/decorator';
-import { Table } from '../index';
+import { centerDecorator } from '../../.storybook/decorator'
+import { Table } from '../index'
 
 export default {
   title: 'Elements/Table',
   component: Table,
   decorators: [centerDecorator],
-};
+}
 
 const headers = [
   {
@@ -18,7 +18,7 @@ const headers = [
     key: 'header-2',
     displayText: 'Header 2',
   },
-];
+]
 
 const rows = [
   {
@@ -35,16 +35,16 @@ const rows = [
     },
     id: 2,
   },
-];
+]
 
-export const Default = () => <Table headers={headers} rows={rows} />;
+export const Default = () => <Table headers={headers} rows={rows} />
 
-export const NoData = () => <Table headers={headers} />;
+export const NoData = () => <Table headers={headers} />
 
-const Template = args => <Table {...args} />;
+const Template = args => <Table {...args} />
 
-export const Playground = Template.bind({});
+export const Playground = Template.bind({})
 Playground.args = {
   headers,
   rows,
-};
+}

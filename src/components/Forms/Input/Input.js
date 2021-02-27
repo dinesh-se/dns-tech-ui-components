@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
 
 const Input = ({ 
   className,
@@ -23,7 +23,7 @@ const Input = ({
     {... disabled ? { disabled } : {}}
     {... pattern ? { pattern } : {}}
   />
-);
+)
 
 Input.propTypes = {
 /**
@@ -65,7 +65,7 @@ Input.propTypes = {
     'color',
     'file',
   ]),
-};
+}
 
 Input.defaultProps = {
   className: '',
@@ -75,6 +75,6 @@ Input.defaultProps = {
   placeholder: '',
   size: null,
   type: 'text',
-};
+}
 
-export default Input;
+export default Input

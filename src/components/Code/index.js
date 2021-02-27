@@ -1,2 +1,2 @@
-export { default as Code } from './Code';
-export { default as MultiLineCode } from './MultiLineCode';
+export { default as Code } from './Code'
+export { default as MultiLineCode } from './MultiLineCode'

@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import styled from 'styled-components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import styled from 'styled-components'
 
 const HighlightWrapper = styled(SyntaxHighlighter)`
   &.code code {
     background: unset; // reset styles applied by spectre.css for code element
   }
-`;
+`
 
 /**
  * MultiLineCode component - displays code block
@@ -31,7 +31,7 @@ const MultiLineCode = ({
   >
     {children}
   </HighlightWrapper>
-);
+)
 
 MultiLineCode.propTypes = {
   /**
@@ -51,13 +51,13 @@ MultiLineCode.propTypes = {
    * Refer [react-syntax-highlighter](https://www.npmjs.com/package/react-syntax-highlighter) prop `style` under props section for list of allowed styles
    */
   style: PropTypes.object,
-};
+}
 
 MultiLineCode.defaultProps = {
   className: '',
   children: null,
   language: null,
   style: undefined,
-};
+}
 
-export default MultiLineCode;
+export default MultiLineCode

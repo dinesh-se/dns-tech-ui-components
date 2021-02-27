@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import { centerDecorator } from '../../.storybook/decorator';
-import { FormInput as InputComponent } from '../index';
-import { FormTextArea as TextAreaComponent } from '../index';
-import { FormSelect as SelectComponent } from '../index';
-import { FormRadio as RadioComponent } from '../index';
-import { FormSwitch as SwitchComponent } from '../index';
-import { FormCheckbox as CheckboxComponent } from '../index';
+import { centerDecorator } from '../../.storybook/decorator'
+import { FormInput as InputComponent } from '../index'
+import { FormTextArea as TextAreaComponent } from '../index'
+import { FormSelect as SelectComponent } from '../index'
+import { FormRadio as RadioComponent } from '../index'
+import { FormSwitch as SwitchComponent } from '../index'
+import { FormCheckbox as CheckboxComponent } from '../index'
 
-const selectOptions = ['Slack', 'Skype', 'Hipchat'];
-const radioOptions = ['Male', 'Female'];
+const selectOptions = ['Slack', 'Skype', 'Hipchat']
+const radioOptions = ['Male', 'Female']
 
 export const SampleForm = () => (
   <form>
@@ -22,7 +22,7 @@ export const SampleForm = () => (
       <CheckboxComponent label="Remember me" />
     </fieldset>
   </form>
-);
+)
 
 export default {
   title: 'Elements/Forms',
@@ -36,17 +36,17 @@ export default {
     CheckboxComponent,
   },
   decorators: [centerDecorator]
-};
+}
 
 const size = {
   control: {
     type: 'inline-radio',
     options: ['sm', 'lg']
   }
-};
+}
 
-const InputTemplate = (args) => <InputComponent {...args} />;
-export const Input = InputTemplate.bind({});
+const InputTemplate = (args) => <InputComponent {...args} />
+export const Input = InputTemplate.bind({})
 Input.args = {
   disabled: false,
   iconName: '',
@@ -56,7 +56,7 @@ Input.args = {
   placeholder: 'Placeholder',
   stateMessage: '',
   type: 'text',
-};
+}
 Input.argTypes = {
   iconPosition: {
     control: {
@@ -88,17 +88,17 @@ Input.argTypes = {
       ],
     }
   }
-};
+}
 
-const TextAreaTemplate = (args) => <TextAreaComponent {...args} />;
-export const TextArea = TextAreaTemplate.bind({});
+const TextAreaTemplate = (args) => <TextAreaComponent {...args} />
+export const TextArea = TextAreaTemplate.bind({})
 TextArea.args = {
   disabled: false,
   label: 'Message',
   placeholder: 'Textarea',
   rows: 5,
   stateMessage: '',
-};
+}
 TextArea.argTypes = {
   rows: {
     control: {
@@ -113,17 +113,17 @@ TextArea.argTypes = {
       options: ['success', 'error'],
     }
   },
-};
+}
 
-const SelectTemplate = args => <SelectComponent {...args} />;
-export const Select = SelectTemplate.bind({});
+const SelectTemplate = args => <SelectComponent {...args} />
+export const Select = SelectTemplate.bind({})
 Select.args = {
   disabled: false,
   label: 'Source',
   multiple: false,
   options: selectOptions,
   stateMessage: '',
-};
+}
 Select.argTypes = {
   size,
   state: {
@@ -132,10 +132,10 @@ Select.argTypes = {
       options: ['success', 'error'],
     }
   },
-};
+}
 
-const RadioTemplate = args => <RadioComponent {...args} />;
-export const Radio = RadioTemplate.bind({});
+const RadioTemplate = args => <RadioComponent {...args} />
+export const Radio = RadioTemplate.bind({})
 Radio.args = {
   disabled: false,
   inline: false,
@@ -143,7 +143,7 @@ Radio.args = {
   name: 'gender',
   options: radioOptions,
   stateMessage: '',
-};
+}
 Radio.argTypes = {
   size,
   state: {
@@ -152,15 +152,15 @@ Radio.argTypes = {
       options: ['error'],
     }
   },
-};
+}
 
-const SwitchTemplate = args => <SwitchComponent {...args} />;
-export const Switch = SwitchTemplate.bind({});
+const SwitchTemplate = args => <SwitchComponent {...args} />
+export const Switch = SwitchTemplate.bind({})
 Switch.args = {
   disabled: false,
   label: 'Send me emails with news and tips',
   stateMessage: '',
-};
+}
 Switch.argTypes = {
   size,
   state: {
@@ -169,17 +169,17 @@ Switch.argTypes = {
       options: ['error'],
     }
   },
-};
+}
 
-const CheckboxTemplate = args => <CheckboxComponent {...args} />;
-export const Checkbox = CheckboxTemplate.bind({});
+const CheckboxTemplate = args => <CheckboxComponent {...args} />
+export const Checkbox = CheckboxTemplate.bind({})
 Checkbox.args = {
   disabled: false,
   indeterminate: false,
   inline: false,
   label: 'Remember me',
   stateMessage: '',
-};
+}
 Checkbox.argTypes = {
   size,
   state: {
@@ -188,4 +188,4 @@ Checkbox.argTypes = {
       options: ['error'],
     }
   },
-};
+}

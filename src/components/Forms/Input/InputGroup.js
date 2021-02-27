@@ -1,7 +1,7 @@
-import React, { cloneElement } from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
-import { useId } from 'react-id-generator';
+import React, { cloneElement } from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
+import { useId } from 'react-id-generator'
 
 /**
  * InputGroup component - combines multiple input elements and button as a group.
@@ -13,7 +13,7 @@ const InputGroup = ({
   className,
   size,
 }) => { 
-  const [htmlId] = useId();
+  const [htmlId] = useId()
 
   return (
     <div className={cn(className, 'input-group')}>
@@ -29,8 +29,8 @@ const InputGroup = ({
         cloneElement(child, { key: `${idx}-${htmlId}`, size })
       ))}
     </div>
-  );
-};
+  )
+}
 
 InputGroup.propTypes = {
   /* 
@@ -49,12 +49,12 @@ InputGroup.propTypes = {
    * Button sizes: small, medium default and large.
    */
   size: PropTypes.oneOf(['sm', 'lg']),
-};
+}
 
 InputGroup.defaultProps = {
   addonText: '',
   className: '',
   size: null,
-};
+}
 
-export default InputGroup;
+export default InputGroup

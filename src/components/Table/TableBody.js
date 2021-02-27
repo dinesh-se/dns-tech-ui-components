@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import objectHash from 'object-hash';
+import React from 'react'
+import PropTypes from 'prop-types'
+import objectHash from 'object-hash'
 
 const TableBody = ({ headers, rows }) => (
   <tbody>
@@ -12,7 +12,7 @@ const TableBody = ({ headers, rows }) => (
       </tr>
     ))}
   </tbody>
-);
+)
 
 TableBody.propTypes = {
   headers: PropTypes.arrayOf(
@@ -26,10 +26,10 @@ TableBody.propTypes = {
       id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     }),
   ),
-};
+}
 
 TableBody.defaultProps = {
   rows: [],
-};
+}
 
-export default TableBody;
+export default TableBody

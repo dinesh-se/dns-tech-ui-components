@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
-import { useId } from 'react-id-generator';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
+import { useId } from 'react-id-generator'
 
-import Input from './Input';
+import Input from './Input'
 
 /**
  * FormInput component - visit `Controls` for configuration options
@@ -22,10 +22,10 @@ const FormInput = ({
   stateMessage,
   type,
 }) => {
-  const [htmlId] = useId();
-  const hasIcon = iconName || loading;
+  const [htmlId] = useId()
+  const hasIcon = iconName || loading
   const iconPositionClass = iconPosition && hasIcon ? `has-icon-${iconPosition}` : (
-    hasIcon ? 'has-icon-right' : '');
+    hasIcon ? 'has-icon-right' : '')
 
   return (
     <div className={cn(
@@ -65,8 +65,8 @@ const FormInput = ({
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
 FormInput.propTypes = {
   /**
@@ -129,7 +129,7 @@ FormInput.propTypes = {
     'color',
     'file',
   ]),
-};
+}
 
 FormInput.defaultProps = {
   className: '',
@@ -144,6 +144,6 @@ FormInput.defaultProps = {
   state: null,
   stateMessage: '',
   type: 'text',
-};
+}
 
-export default FormInput;
+export default FormInput

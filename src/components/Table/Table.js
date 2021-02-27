@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
-import styled from 'styled-components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
+import styled from 'styled-components'
 
-import TableHead from './TableHead';
-import TableBody from './TableBody';
+import TableHead from './TableHead'
+import TableBody from './TableBody'
 
 const NoDataRow = styled.div`
   line-height: 50px;
   text-align: center;
-`;
+`
 
 /**
  * Table component - visit `Controls` for configuration options
@@ -30,7 +30,7 @@ const Table = ({ className, headers, hover, rows, scroll, striped }) => (
     </table>
     {!rows.length && <NoDataRow className="table-no-data">No Data</NoDataRow>}
   </div>
-);
+)
 
 Table.propTypes = {
   /**
@@ -67,7 +67,7 @@ Table.propTypes = {
    * Displays rows with striped desings, if true.
    */
   striped: PropTypes.bool,
-};
+}
 
 Table.defaultProps = {
   className: '',
@@ -75,6 +75,6 @@ Table.defaultProps = {
   rows: [],
   scroll: false,
   striped: true,
-};
+}
 
-export default Table;
+export default Table

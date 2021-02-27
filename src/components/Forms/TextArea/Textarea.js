@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
 
 /**
  * TextArea component - visit `Controls` for configuration options
@@ -20,7 +20,7 @@ const TextArea = ({
     {... htmlId ? { id: htmlId } : {}}
     {... disabled ? { disabled } : {}}
   />
-);
+)
 
 TextArea.propTypes = {
   /**
@@ -43,7 +43,7 @@ TextArea.propTypes = {
    * Sets the height of textarea.
    */
   rows: PropTypes.number,
-};
+}
 
 TextArea.defaultProps = {
   className: '',
@@ -51,6 +51,6 @@ TextArea.defaultProps = {
   htmlId: null,
   placeholder: '',
   rows: 3,
-};
+}
 
-export default TextArea;
+export default TextArea

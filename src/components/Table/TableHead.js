@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const TableHead = ({ headers }) => (
   <thead>
@@ -9,7 +9,7 @@ const TableHead = ({ headers }) => (
       ))}
     </tr>
   </thead>
-);
+)
 
 TableHead.propTypes = {
   headers: PropTypes.arrayOf(
@@ -18,6 +18,6 @@ TableHead.propTypes = {
       displayText: PropTypes.string.isRequired,
     })
   ).isRequired,
-};
+}
 
-export default TableHead;
+export default TableHead

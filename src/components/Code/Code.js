@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 /**
  * Code component - provides ability to highlight text inline
@@ -10,7 +10,7 @@ const Code = ({
   text,
 }) => (
   <code className={className}>{text}</code>
-);
+)
 
 Code.propTypes = {
   /**
@@ -21,10 +21,10 @@ Code.propTypes = {
    * Text to be displayed as code block (inline).
    */
   text: PropTypes.string.isRequired,
-};
+}
 
 Code.defaultProps = {
   className: '',
-};
+}
 
-export default Code;
+export default Code

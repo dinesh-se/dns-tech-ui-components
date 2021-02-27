@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
 
 /**
  * Label component - displays text as a label
@@ -20,7 +20,7 @@ const Label = ({
   )}>
     {text}
   </span>
-);
+)
 
 Label.propTypes = {
   /**
@@ -39,12 +39,12 @@ Label.propTypes = {
    * Supported types
    */
   type: PropTypes.oneOf(['primary', 'secondary', 'success', 'warning', 'error']),
-};
+}
 
 Label.defaultProps = {
   className: '',
   rounded: false,
   type: null,
-};
+}
 
-export default Label;
+export default Label

@@ -20,3 +20,5 @@ export { Label } from './components/Label'
 
 export { Code } from './components/Code'
 export { MultiLineCode } from './components/Code'
+
+export { Heading } from './components/Typography'

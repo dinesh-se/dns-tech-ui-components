@@ -6,7 +6,10 @@ import { MultiLineCode } from '../index'
 
 export default {
   title: 'Elements/Code',
-  components: [Code, MultiLineCode],
+  subcomponents: {
+    Code, 
+    MultiLineCode,
+  },
   decorators: [centerDecorator],
 }
 

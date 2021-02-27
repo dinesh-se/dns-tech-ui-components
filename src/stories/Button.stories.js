@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 import { centerDecorator } from '../../.storybook/decorator';
-import { Button } from '../components/Button/';
+import { Button } from '../index';
 
 export default {
   title: 'Elements/Button',

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { centerDecorator } from '../../.storybook/decorator';
-import { Table } from '../components/Table';
+import { Table } from '../index';
 
 export default {
   title: 'Elements/Table',
@@ -43,8 +43,8 @@ export const NoData = () => <Table headers={headers} />;
 
 const Template = args => <Table {...args} />;
 
-export const PlayGround = Template.bind({});
-PlayGround.args = {
+export const Playground = Template.bind({});
+Playground.args = {
   headers,
   rows,
 };

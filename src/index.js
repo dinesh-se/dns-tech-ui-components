@@ -15,3 +15,8 @@ export { TextArea } from './components/Forms';
 export { FormTextArea } from './components/Forms';
 
 export { Table } from './components/Table';
+
+export { Label } from './components/Label';
+
+export { Code } from './components/Code';
+export { MultiLineCode } from './components/Code';

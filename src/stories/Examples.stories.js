@@ -4,9 +4,9 @@ import styled from 'styled-components';
 
 import { centerDecorator } from '../../.storybook/decorator';
 
-import { InputGroup as InputGroupComponent } from '../../src';
-import { Checkbox, Input, Select, Switch } from '../../src/components/Forms';
-import { Button } from '../../src/components/Button';
+import { InputGroup as InputGroupComponent } from '../index';
+import { Checkbox, Input, Select, Switch } from '../index';
+import { Button } from '../index';
 
 export default {
   title: 'Examples',

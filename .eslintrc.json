@@ -16,7 +16,8 @@
     "describe": true,
     "it": true,
     "expect": true,
-    "jest": true
+    "jest": true,
+    "module": true
   },
   "extends": [
     "eslint:recommended",

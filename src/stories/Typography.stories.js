@@ -5,9 +5,7 @@ import { Heading as HeadingComponent } from '../../src'
 
 export default {
   title: 'Elements/Typography',
-  subcomponents: {
-    HeadingComponent,
-  },
+  component: HeadingComponent,
   decorators: [columnDecorator, centerDecorator],
 }
 
@@ -37,4 +35,3 @@ export const Headings = () => (
     <HeadingComponent text="Heading 6" size={6} />
   </Fragment>
 )
-// Headings.decorators = [columnDecorator]

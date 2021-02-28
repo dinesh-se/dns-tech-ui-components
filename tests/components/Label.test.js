@@ -16,7 +16,7 @@ describe('Label Component', () => {
     it('Given the component is mounted', () => mountComponent())
     it('Expect the label text is displayed', () => {
       expect(element.text()).toBe('test')
-      expect(element.hasClass('label')).toBeTruthy()
+      expect(element.find('span').hasClass('label')).toBeTruthy()
     })
   })
 
@@ -27,7 +27,7 @@ describe('Label Component', () => {
       })
     })
     it('Expect the label element has class according to type', () => {
-      expect(element.hasClass('label-success')).toBeTruthy()
+      expect(element.find('span').hasClass('label-success')).toBeTruthy()
     })
   })
 
@@ -38,7 +38,7 @@ describe('Label Component', () => {
       })
     })
     it('Expect the label element has class rounded applied', () => {
-      expect(element.hasClass('label-rounded')).toBeTruthy()
+      expect(element.find('span').hasClass('label-rounded')).toBeTruthy()
     })
   })
 })

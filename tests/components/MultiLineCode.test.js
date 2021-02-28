@@ -20,7 +20,6 @@ describe('MultiLineCode component', () => {
       })
     })
     it('Expect the component is renders in default state', () => {
-      console.log(element.find('code').text())
       expect(element.find('pre').hasClass('code')).toBeTruthy()
       expect(element.find('code').text()).toBe('<p>test</p>')
     })

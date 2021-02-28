@@ -25,6 +25,18 @@ describe('MultiLineCode component', () => {
     })
   })
 
+  describe('renders with language', () => {
+    it('Given the component is mounted', () => {
+      mountComponent({
+        children,
+        language: 'HTML',
+      })
+    })
+    it('Expect the component is renders in default state', () => {
+      expect(element.find('code').hasClass('language-HTML')).toBeTruthy()
+    })
+  })
+
   describe('renders with custom style', () => {
     it('Given the component is mounted with custom style', () => {
       mountComponent({

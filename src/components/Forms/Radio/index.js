@@ -1,2 +1,2 @@
-export { default as Radio } from './Radio';
-export { default } from './FormRadio';
+export { default as Radio } from './Radio'
+export { default } from './FormRadio'

@@ -7,7 +7,7 @@ export const tableHeaders = [
     key: 'header-2',
     displayText: 'Header 2',
   }
-];
+]
 
 export const tableRows = [
   {
@@ -24,4 +24,4 @@ export const tableRows = [
     },
     id: 2,
   },
-];
+]

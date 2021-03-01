@@ -49,9 +49,12 @@
     "@storybook/addon-essentials": "^6.1.20",
     "@storybook/addon-links": "^6.1.20",
     "@storybook/addon-storyshots": "^6.1.20",
+    "@storybook/addon-storyshots-puppeteer": "^6.1.20",
+    "@storybook/addons": "^6.1.20",
     "@storybook/react": "^6.1.20",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
     "babel-loader": "^8.2.2",
+    "babel-plugin-styled-components": "^1.12.0",
     "chromatic": "^5.6.3",
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.1",
@@ -63,6 +66,7 @@
     "jest-prop-type-error": "^1.1.0",
     "lint-staged": "^10.5.4",
     "node-sass": "^5.0.0",
+    "puppeteer": "^8.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "rimraf": "^3.0.2",
@@ -76,6 +80,7 @@
     "classnames": "^2.2.6",
     "object-hash": "^2.1.1",
     "react-id-generator": "^3.0.1",
+    "react-syntax-highlighter": "^15.4.3",
     "styled-components": "^5.2.1"
   },
   "peerDependencies": {
@@ -109,19 +114,18 @@
   "scripts": {
     "bootstrap": "yarn --frozen-lockfile",
     "clean": "rimraf lib",
-    "clean:storybook": "rimraf storybook-static",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "yarn clean:storybook && build-storybook",
+    "clean:sb": "rimraf storybook-static",
+    "sb": "start-storybook -p 6006",
+    "build-sb": "yarn clean:sb && build-storybook",
     "build": "yarn clean && babel src --out-dir lib --ignore '**/stories'",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "test": "yarn coverage && yarn test:storyshots",
     "test:ut": "jest",
     "test:hook": "jest --bail --changedSince origin/main",
-    "test:storyshots": "jest -c=jest.config.storyshots.json",
+    "test:storyshots": "yarn build-sb && jest -c=jest.config.storyshots.json",
     "coverage": "jest --coverage",
     "package-generate": "npm pack",
-    "package-check": "npm publish --dry-run",
-    "chromatic": "chromatic --project-token CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes"
+    "package-check": "npm publish --dry-run"
   }
 }

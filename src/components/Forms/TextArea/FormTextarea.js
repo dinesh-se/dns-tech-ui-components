@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
-import { useId } from 'react-id-generator';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
+import { useId } from 'react-id-generator'
 
-import TextArea from './Textarea';
+import TextArea from './Textarea'
 
 /**
  * FormTextArea component - visit `Controls` for configuration options
@@ -18,7 +18,7 @@ const FormTextArea = ({
   state,
   stateMessage,
 }) => {
-  const [htmlId] = useId();
+  const [htmlId] = useId()
 
   return (
     <div className={cn(
@@ -49,8 +49,8 @@ const FormTextArea = ({
         <p className='form-input-hint'>{stateMessage}</p>
       )}
     </div>
-  );
-};
+  )
+}
 
 FormTextArea.propTypes = {
   /**
@@ -85,7 +85,7 @@ FormTextArea.propTypes = {
    * Displays message underneath the element.
    */
   stateMessage: PropTypes.string,
-};
+}
 
 FormTextArea.defaultProps = {
   className: '',
@@ -95,6 +95,6 @@ FormTextArea.defaultProps = {
   rows: 3,
   size: null,
   state: null,
-};
+}
 
-export default FormTextArea;
+export default FormTextArea

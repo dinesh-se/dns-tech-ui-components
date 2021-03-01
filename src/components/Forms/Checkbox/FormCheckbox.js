@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
 
-import Checkbox from './Checkbox';
+import Checkbox from './Checkbox'
 
 /**
  * FormCheckbox component - visit `Controls` for configuration options
@@ -34,7 +34,7 @@ const FormCheckbox = ({
       <p className='form-input-hint'>{stateMessage}</p>
     )}
   </div>
-);
+)
 
 FormCheckbox.propTypes = {
   /**
@@ -69,7 +69,7 @@ FormCheckbox.propTypes = {
    * Displays message underneath the element.
    */
   stateMessage: PropTypes.string,
-};
+}
 
 FormCheckbox.defaultProps = {
   className: '',
@@ -80,6 +80,6 @@ FormCheckbox.defaultProps = {
   size: null,
   state: null,
   stateMessage: '',
-};
+}
 
-export default FormCheckbox;
+export default FormCheckbox

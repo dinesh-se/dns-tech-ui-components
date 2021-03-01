@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
 
-import Switch from './Switch';
+import Switch from './Switch'
 
 /**
  * FormSwitch component - visit `Controls` for configuration options
@@ -30,8 +30,8 @@ const FormSwitch = ({
         <p className='form-input-hint'>{stateMessage}</p>
       )}
     </div>
-  );
-};
+  )
+}
 
 FormSwitch.propTypes = {
   /**
@@ -58,7 +58,7 @@ FormSwitch.propTypes = {
    * Displays message underneath the element.
    */
   stateMessage: PropTypes.string,
-};
+}
 
 FormSwitch.defaultProps = {
   className: '',
@@ -67,6 +67,6 @@ FormSwitch.defaultProps = {
   size: null,
   state: null,
   stateMessage: '',
-};
+}
 
-export default FormSwitch;
+export default FormSwitch

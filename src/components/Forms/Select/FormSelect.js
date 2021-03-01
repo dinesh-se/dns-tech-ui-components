@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
 
-import Select from './Select';
+import Select from './Select'
 
 /**
  * FormSelect component - visit `Controls` for configuration options
@@ -41,8 +41,8 @@ const FormSelect = ({
         <p className='form-input-hint'>{stateMessage}</p>
       )}
     </div>
-  );
-};
+  )
+}
 
 FormSelect.propTypes = {
   /**
@@ -79,7 +79,7 @@ FormSelect.propTypes = {
    * Displays message underneath the element.
    */
   stateMessage: PropTypes.string,
-};
+}
 
 FormSelect.defaultProps = {
   className: '',
@@ -89,6 +89,6 @@ FormSelect.defaultProps = {
   size: null,
   state: null,
   stateMessage: '',
-};
+}
 
-export default FormSelect;
+export default FormSelect

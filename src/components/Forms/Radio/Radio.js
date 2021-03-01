@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
 
 /**
  * Radio component - visit `Controls` for configuration options
@@ -33,7 +33,7 @@ const Radio = ({
       </label>
     ))}
   </Fragment>
-);
+)
 
 Radio.propTypes = {
   /**
@@ -74,7 +74,7 @@ Radio.propTypes = {
    * Displays message underneath the element.
    */
   stateMessage: PropTypes.string,
-};
+}
 
 Radio.defaultProps = {
   className: '',
@@ -84,6 +84,6 @@ Radio.defaultProps = {
   size: null,
   state: null,
   stateMessage: '',
-};
+}
 
-export default Radio;
+export default Radio

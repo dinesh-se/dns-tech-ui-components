@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
 
-import Radio from './Radio';
+import Radio from './Radio'
 
 /**
  * FormRadio component - visit `Controls` for configuration options
@@ -43,8 +43,8 @@ const FormRadio = ({
         <p className='form-input-hint'>{stateMessage}</p>
       )}
     </div>
-  );
-};
+  )
+}
 
 FormRadio.propTypes = {
   /**
@@ -85,7 +85,7 @@ FormRadio.propTypes = {
    * Displays message underneath the element.
    */
   stateMessage: PropTypes.string,
-};
+}
 
 FormRadio.defaultProps = {
   className: '',
@@ -95,6 +95,6 @@ FormRadio.defaultProps = {
   size: null,
   state: null,
   stateMessage: '',
-};
+}
 
-export default FormRadio;
+export default FormRadio

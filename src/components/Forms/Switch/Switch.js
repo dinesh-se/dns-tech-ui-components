@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
 
 /**
  * Switch component - visit `Controls` for configuration options
@@ -23,7 +23,7 @@ const Switch = ({
     />
     <i className='form-icon'></i>{label}
   </label>
-);
+)
 
 Switch.propTypes = {
   /**
@@ -42,13 +42,13 @@ Switch.propTypes = {
    * Sets the size of the component.
    */
   size: PropTypes.oneOf(['sm', 'lg']),
-};
+}
 
 Switch.defaultProps = {
   className: '',
   disabled: false,
   label: '',
   size: null,
-};
+}
 
-export default Switch;
+export default Switch

@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'
 
-import { centerDecorator } from '../../.storybook/decorator';
-import { Button } from '../components/Button/';
+import { centerDecorator } from '../../.storybook/decorator'
+import { Button } from '../index'
 
 export default {
   title: 'Elements/Button',
   component: Button,
   decorators: [centerDecorator]
-};
+}
 
 export const variants = () => (
   <Fragment>
@@ -15,7 +15,7 @@ export const variants = () => (
     <Button label="primary" variant="primary" />
     <Button label="link" variant="link" />
   </Fragment>
-);
+)
 
 export const sizes = () => (
   <Fragment>
@@ -24,14 +24,14 @@ export const sizes = () => (
     <Button label="large" size="lg" />
     <Button label="block" size="block" />
   </Fragment>
-);
+)
 
 export const states = () => (
   <Fragment>
     <Button label="success" state="success" />
     <Button label="error" state="error" />
   </Fragment>
-);
+)
 
 export const loading = () => (
   <Fragment>
@@ -39,7 +39,7 @@ export const loading = () => (
     <Button label="primary" variant="primary" loading />
     <Button label="link" variant="link" loading />
   </Fragment>
-);
+)
 
 export const buttonGroups = () => (
   <Fragment>
@@ -49,7 +49,7 @@ export const buttonGroups = () => (
       <Button label="third button" />
     </div>
   </Fragment>
-);
+)
 
 export const disabled = () => (
   <Fragment>
@@ -57,11 +57,11 @@ export const disabled = () => (
     <Button label="primary" variant="primary" disabled />
     <Button label="link" variant="link" disabled />
   </Fragment>
-);
+)
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <Button {...args} />
 
-export const Playground = Template.bind({});
+export const Playground = Template.bind({})
 Playground.args = {
   label: 'Button',
-};
+}

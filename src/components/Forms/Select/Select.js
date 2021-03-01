@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
 
 /**
  * Select component - visit `Controls` for configuration options
@@ -27,8 +27,8 @@ const Select = ({
         <option key={`${idx}-${option}`}>{option}</option>
       ))}
     </select>
-  );
-};
+  )
+}
 
 Select.propTypes = {
   /**
@@ -53,13 +53,13 @@ Select.propTypes = {
    * Sets the size of the component.
    */
   size: PropTypes.oneOf(['sm', 'lg']),
-};
+}
 
 Select.defaultProps = {
   className: '',
   disabled: false,
   multiple: false,
   size: null,
-};
+}
 
-export default Select;
+export default Select

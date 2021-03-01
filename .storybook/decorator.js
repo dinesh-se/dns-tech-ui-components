@@ -8,12 +8,22 @@ const DecoratorWrapper = styled.div`
   flex-wrap: wrap;
 
   > * {
-    margin: 4px;
+    margin: .25rem;
   }
 `;
+
+const FlexColumn = styled.div`
+  flex-direction: column;
+`
 
 export const centerDecorator = story => (
   <DecoratorWrapper>
     {story()}
   </DecoratorWrapper>
 );
+
+export const columnDecorator = story => (
+  <FlexColumn>
+    {story()}
+  </FlexColumn>
+)

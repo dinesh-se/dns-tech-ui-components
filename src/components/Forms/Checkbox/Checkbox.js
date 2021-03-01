@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
-import cn from 'classnames';
+import React, { useEffect, useRef } from 'react'
+import PropTypes from 'prop-types'
+import cn from 'classnames'
 
 /**
  * Checkbox component - visit `Controls` for configuration options
@@ -13,13 +13,13 @@ const Checkbox = ({
   label,
   size,
 }) => {
-  const checkboxRef = useRef();
+  const checkboxRef = useRef()
 
   useEffect(() => {
     if (checkboxRef.current) {
-      checkboxRef.current.indeterminate = indeterminate;
+      checkboxRef.current.indeterminate = indeterminate
     }
-  }, [indeterminate]);
+  }, [indeterminate])
 
   return (
     <label className={cn(
@@ -36,8 +36,8 @@ const Checkbox = ({
       />
       <i className='form-icon'></i>{label}
     </label>
-  );
-};
+  )
+}
 
 Checkbox.propTypes = {
   /**
@@ -64,7 +64,7 @@ Checkbox.propTypes = {
    * Sets the size of the component.
    */
   size: PropTypes.oneOf(['sm', 'lg']),
-};
+}
 
 Checkbox.defaultProps = {
   className: '',
@@ -73,6 +73,6 @@ Checkbox.defaultProps = {
   inline: false,
   label: '',
   size: null,
-};
+}
 
-export default Checkbox;
+export default Checkbox

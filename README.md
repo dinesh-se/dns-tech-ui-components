@@ -1,5 +1,7 @@
 # @dns-tech/ui-components
-UI components library built with [React](https://reactjs.org/) using [spectre.css](https://picturepan2.github.io/spectre/)
+UI components library built with [React](https://reactjs.org/) and [spectre.css](https://picturepan2.github.io/spectre/) css framework
+
+[Storybook URL](https://main--60337a40b7016200231bd952.chromatic.com) :tada:
 
 ## Installation
 

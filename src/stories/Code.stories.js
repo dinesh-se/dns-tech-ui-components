@@ -1,8 +1,10 @@
 import React from 'react'
 
 import { centerDecorator } from '../../.storybook/decorator'
-import { Code } from '../index'
-import { MultiLineCode } from '../index'
+import { 
+  Code,
+  MultiLineCode 
+} from '../index'
 
 export default {
   title: 'Elements/Code',

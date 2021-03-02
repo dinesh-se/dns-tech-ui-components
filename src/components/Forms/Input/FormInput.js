@@ -22,7 +22,7 @@ const FormInput = ({
   stateMessage,
   type,
 }) => {
-  const [htmlId] = useId()
+  const [htmlId] = useId(1, 'form-input-')
   const hasIcon = iconName || loading
   const iconPositionClass = iconPosition && hasIcon ? `has-icon-${iconPosition}` : (
     hasIcon ? 'has-icon-right' : '')

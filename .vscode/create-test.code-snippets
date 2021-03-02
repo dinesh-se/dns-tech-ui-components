@@ -1,0 +1,33 @@
+{
+  "create-test": {
+    "prefix": "dnsct",
+    "body": [
+      "import React from 'react'",
+      "import { mount } from 'enzyme'",
+      "",
+      "import { ${1:example} } from '../../src'",
+      "",
+      "describe('${1:example} Component', () => {",
+      "  let element",
+      "",
+      "  const mountComponent = props => {",
+      "    element = mount(",
+      "      <${1:example}",
+      "        {...props}",
+      "      />",
+      "    )",
+      "  }",
+      "",
+      "  describe('renders in default state', () => {",
+      "    it('Given the component is mounted', () => {",
+      "      mountComponent()",
+      "    })",
+      "    it('Expect', () => {",
+      "      console.log(element.debug())",
+      "    })",
+      "  })",
+      "})"
+    ],
+    "description": "create a test for component"
+  }
+}

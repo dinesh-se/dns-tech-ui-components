@@ -1,0 +1,24 @@
+{
+	"create-story": {
+		"prefix": "dnscs",
+		"body": [
+			"import React from 'react'",
+			"",
+			"import { centerDecorator } from '../../.storybook/decorator'",
+			"import { ${1:example} as ${1:example}Component } from '../../src'",
+			"",
+			"export default {",
+			"  title: '',",
+			"  component: ${1:example},",
+			"  decorators: [centerDecorator],",
+			"}",
+			"",
+			"const Template = args => <${1:example}Component {...args} />",
+			"export const ${1:example} = Template.bind({})",
+			"${1:example}.args = {",
+			"  ",
+			"}"
+		],
+		"description": "create a story for component"
+	}
+}

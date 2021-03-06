@@ -8,7 +8,7 @@
 			"import { ${1:example} as ${1:example}Component } from '../../src'",
 			"",
 			"export default {",
-			"  title: '',",
+			"  title: '$2',",
 			"  component: ${1:example},",
 			"  decorators: [centerDecorator],",
 			"}",

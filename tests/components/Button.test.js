@@ -149,4 +149,27 @@ describe('Button component', () => {
       expect(element.find('i.icon').hasClass('test-icon')).toBeTruthy()
     })
   })
+
+  describe('Button renders with badge', () => {
+    it('Given the button component is rendered with badge set to true', () => {
+      mountComponent({
+        badge: true,
+      })
+    })
+    it('Expect the button has class for badge applied', () => {
+      expect(element.hasClass('badge')).toBeTruthy()
+    })
+  })
+
+  describe('Button renders with badge text', () => {
+    it('Given the button component is rendered with badge set to true', () => {
+      mountComponent({
+        badgeText: 100,
+      })
+    })
+    it('Expect the button has class for badge applied and data attr for badge text is displayed', () => {
+      expect(element.hasClass('badge')).toBeTruthy()
+      expect(element.prop('data-badge')).toBe(100)
+    })
+  })
 })

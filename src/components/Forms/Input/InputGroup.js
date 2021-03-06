@@ -13,7 +13,7 @@ const InputGroup = ({
   className,
   size,
 }) => { 
-  const [htmlId] = useId()
+  const [htmlId] = useId(1, 'input-group-')
 
   return (
     <div className={cn(className, 'input-group')}>

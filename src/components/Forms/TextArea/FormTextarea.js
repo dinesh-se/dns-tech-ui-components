@@ -18,7 +18,7 @@ const FormTextArea = ({
   state,
   stateMessage,
 }) => {
-  const [htmlId] = useId()
+  const [htmlId] = useId(1, 'form-textarea-')
 
   return (
     <div className={cn(

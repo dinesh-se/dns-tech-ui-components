@@ -47,6 +47,12 @@ Accordion.args = {
 }
 Accordion.argTypes = {
   list: {
-    control: 'array',
+    control: null,
+  },
+  type: {
+    control: {
+      type: 'inline-radio',
+      options: ['checkbox', 'radio'],
+    }
   }
 }

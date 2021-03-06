@@ -59,6 +59,17 @@ export const disabled = () => (
   </Fragment>
 )
 
+export const IconButton = () => (
+  <Button label="Button" iconName="icon-arrow-right" />
+)
+
+export const BadgeButton = () => (
+  <Fragment>
+    <Button label="Button" badge />
+    <Button label="Button" badgeText="8" />
+  </Fragment>
+)
+
 const Template = (args) => <Button {...args} />
 
 export const Playground = Template.bind({})

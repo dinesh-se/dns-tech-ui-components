@@ -6,6 +6,8 @@ import cn from 'classnames'
  * Button component - visit `Controls` for configuration options
  */
 const Button = ({
+  badge,
+  badgeText,
   className,
   disabled,
   iconName,
@@ -29,10 +31,12 @@ const Button = ({
       { 'input-group-btn': inputGroup },
       { 'btn-action': shape },
       { 's-circle': shape === 'circle' },
-      { loading: loading }
+      { loading: loading },
+      { badge: badge || badgeText },
     )}
+    {... badgeText ? { 'data-badge': badgeText } : {}}
     disabled={disabled}
-    {...(disabled ? { tabIndex: -1 } : {})}
+    {... disabled ? { tabIndex: -1 } : {}}
     onClick={onClick}
   >
     {label}
@@ -43,6 +47,17 @@ const Button = ({
 )
 
 Button.propTypes = {
+  /**
+   * Displays button in badge mode (dot on top right) when enabled
+   */
+  badge: PropTypes.bool,
+  /**
+   * Text or number to be displayed as badge on top right
+   */
+  badgeText: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
   /**
    * Passed styles to Button component.
    */
@@ -91,6 +106,9 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
+  badge: false,
+  badgeText: '',
+  className: '',
   disabled: false,
   iconName: '',
   inputGroup: false,

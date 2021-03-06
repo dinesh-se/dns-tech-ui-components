@@ -22,8 +22,9 @@
       "    it('Given the component is mounted', () => {",
       "      mountComponent()",
       "    })",
-      "    it('Expect', () => {",
+      "    it('Expect the component renders in default state', () => {",
       "      console.log(element.debug())",
+      "      $2",
       "    })",
       "  })",
       "})"

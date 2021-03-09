@@ -90,7 +90,7 @@ Button.propTypes = {
   /**
    * Button label content.
    */
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   /**
    * Button loading state, if true.
    */
@@ -112,6 +112,7 @@ Button.defaultProps = {
   disabled: false,
   iconName: '',
   inputGroup: false,
+  label: '',
   variant: null,
   shape: null,
   state: null,

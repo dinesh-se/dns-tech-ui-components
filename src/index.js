@@ -43,3 +43,11 @@ export { ProgressBar } from './components/Bar'
 export { SliderBar } from './components/Bar'
 
 export { Breadcrumb } from './components/Breadcrumb'
+
+export {
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+  CardImage,
+} from './components/Card'

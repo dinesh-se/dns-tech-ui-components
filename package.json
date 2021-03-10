@@ -126,6 +126,7 @@
     "test:visual": "docker-compose build && docker-compose run visual",
     "test:ut": "jest",
     "test:hook": "jest --bail --changedSince origin/main",
+    "test:shots": "jest -c=jest.config.storyshots.json",
     "test:storyshots": "yarn build-sb && jest -c=jest.config.storyshots.json",
     "coverage": "jest --coverage",
     "package-generate": "npm pack",

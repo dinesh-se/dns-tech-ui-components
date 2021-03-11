@@ -8,16 +8,11 @@ const getMatchOptions = () => ({
 })
 
 const beforeScreenshot = (page) => {
-  return new Promise((resolve) =>
-    setTimeout(() => {
-      page.setViewport({
-        width: 800,
-        height: 600,
-        deviceScaleFactor: 1,
-      })
-      resolve()
-    })
-  )
+  return page.setViewport({
+    width: 800,
+    height: 600,
+    deviceScaleFactor: 1,
+  })
 }
 
 initStoryshots({

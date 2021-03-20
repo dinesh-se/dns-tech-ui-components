@@ -119,7 +119,7 @@
   "scripts": {
     "bootstrap": "yarn --frozen-lockfile",
     "build": "yarn clean && yarn transpile:es && yarn transpile:lib",
-    "build-sb": "yarn clean:sb && build-storybook",
+    "build:sb": "yarn clean:sb && build-storybook",
     "clean": "rimraf lib && rimraf es",
     "clean:sb": "rimraf storybook-static",
     "coverage": "jest --coverage",

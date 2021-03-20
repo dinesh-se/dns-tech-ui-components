@@ -1,10 +1,10 @@
 module.exports = {
   presets: [
     [
-      '@babel/preset-env', 
+      '@babel/preset-env',
       { 
         loose: true ,
-        ... process.env.BABEL_ENV === 'es' ? {} : { modules: false }
+        ... process.env.BABEL_ENV === 'es' ? { modules: false } : {}
       },
     ],
     '@babel/preset-react',

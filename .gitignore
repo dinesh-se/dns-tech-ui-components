@@ -3,5 +3,6 @@ dist
 storybook-static
 coverage
 lib
+es
 
 build-storybook.log

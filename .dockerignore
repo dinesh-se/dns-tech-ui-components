@@ -1,0 +1,12 @@
+# Ignore all files by default
+*
+
+# White list only the required files
+!src/
+!tests/
+!package.json
+!yarn.lock
+!babel.config.js
+!jest.config.storyshots.json
+!.storybook/
+!test-utils/

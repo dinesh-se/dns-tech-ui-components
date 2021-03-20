@@ -3,6 +3,7 @@
   "version": "0.0.0-development",
   "description": "UI components library built with React using spectre.css",
   "main": "lib/index.js",
+  "module": "es/index.js",
   "author": "Dinesh Haribabu <dinesh.be.gct@gmail.com> (https://dineshharibabu.in)",
   "license": "MIT",
   "keywords": [
@@ -24,11 +25,13 @@
     "node": ">=10"
   },
   "files": [
+    "es/",
     "lib/",
     "README.md",
     "LICENSE"
   ],
   "directories": {
+    "es": "es",
     "lib": "lib",
     "test": "tests"
   },
@@ -115,20 +118,22 @@
   },
   "scripts": {
     "bootstrap": "yarn --frozen-lockfile",
-    "clean": "rimraf lib",
+    "build": "yarn clean && yarn transpile:es && yarn transpile:lib",
+    "build:sb": "yarn clean:sb && build-storybook",
+    "clean": "rimraf lib && rimraf es",
     "clean:sb": "rimraf storybook-static",
-    "sb": "start-storybook -p 6006",
-    "build-sb": "yarn clean:sb && build-storybook",
-    "build": "yarn clean && babel src --out-dir lib --ignore '**/stories'",
+    "coverage": "jest --coverage",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
+    "package-check": "yarn build && npm publish --dry-run",
+    "sb": "start-storybook -p 6006",
     "test": "yarn coverage",
-    "test:visual": "docker-compose build && docker-compose run visual",
-    "test:ut": "jest",
     "test:hook": "jest --bail --changedSince origin/main",
-    "test:storyshots": "yarn build-sb && jest -c=jest.config.storyshots.json",
-    "coverage": "jest --coverage",
-    "package-generate": "npm pack",
-    "package-check": "yarn build && npm publish --dry-run"
+    "test:shots": "jest -c=jest.config.storyshots.json",
+    "test:storyshots": "yarn build-sb && yarn test:shots",
+    "test:ut": "jest",
+    "test:visual": "docker-compose build && docker-compose run visual",
+    "transpile:es": "BABEL_ENV=es babel src --out-dir es --ignore '**/stories'",
+    "transpile:lib": "babel src --out-dir lib --ignore '**/stories'"
   }
 }

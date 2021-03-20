@@ -1,11 +1,13 @@
-module.exports = function config(api) {
-  api.cache(true)
-
-  return {
-    presets: [
-      ['@babel/preset-env', { loose: true },],
-      '@babel/preset-react',
+module.exports = {
+  presets: [
+    [
+      '@babel/preset-env',
+      { 
+        loose: true ,
+        ... process.env.BABEL_ENV === 'es' ? { modules: false } : {}
+      },
     ],
-    plugins: ['babel-plugin-styled-components'],
-  }
+    '@babel/preset-react',
+  ],
+  plugins: ['babel-plugin-styled-components'],
 }

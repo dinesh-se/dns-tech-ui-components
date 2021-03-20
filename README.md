@@ -13,6 +13,12 @@ npm i @dns-tech/ui-components
 ```
 import { Button } from '@dns-tech/ui-components';
 ```
+
+## Storyshots Testing
+Storyshots testing runs in a docker container. Since chromatic already has visual regression testing as part of the build process, explicit testing script is removed from the build and deployment process. But keeping the code in the repo for any future use cases.
+
+To run image snapshot testing locally, run `yarn test:visual`
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
